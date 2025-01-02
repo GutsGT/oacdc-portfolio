@@ -63,7 +63,7 @@
         </div>
 
         <div class="justify-items-center text-center">
-            <div class="border-2 border-black size-96 rounded-full overflow-hidden block mb-30 bg-cover">
+            <div class="border-2 border-black size-96 rounded-full overflow-hidden block mb-30 bg-cover bg-main-image">
             </div>
         </div>
     </body>

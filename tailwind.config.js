@@ -20,7 +20,7 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             backgroundImage: {
-                'main-image': url('/assets/images/IMG_8693.jpg')
+                'main-image': "url('/assets/images/IMG_8693.jpg')"
             },
             keyframes: {
                 "appear":{
