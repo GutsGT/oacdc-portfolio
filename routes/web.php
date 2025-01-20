@@ -10,6 +10,17 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/aboutme', function () {
+    return view('aboutme');
+});
+Route::get('/academicbackground', function () {
+    return view('academicbackground');
+});
+Route::get('/projects', function () {
+    return view('projects');
+});
+
+
 Route::get('/welcome', function () {
     return view('welcome');
 });

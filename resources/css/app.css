@@ -1,7 +1,110 @@
+@import url(https://db.onlinewebfonts.com/c/83e4a6b639612cd501853be5a7cf97ab?family=Trend+Sans+One+Regular);
+@import url(https://db.onlinewebfonts.com/c/33ca94f43a53fc634323a6fe191ffd64?family=Trend+Sans+W00+Four);
+@import url(https://db.onlinewebfonts.com/c/a96b150094beee7934d27cc7fff32395?family=Trend+Sans+W00+Five);
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 [x-cloak] {
     display: none;
+}
+
+
+@font-face {
+    font-family: "Trend Sans One Regular";
+    src: url("https://db.onlinewebfonts.com/t/83e4a6b639612cd501853be5a7cf97ab.eot");
+    src: url("https://db.onlinewebfonts.com/t/83e4a6b639612cd501853be5a7cf97ab.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/83e4a6b639612cd501853be5a7cf97ab.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/83e4a6b639612cd501853be5a7cf97ab.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/83e4a6b639612cd501853be5a7cf97ab.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/83e4a6b639612cd501853be5a7cf97ab.svg#Trend Sans One Regular")format("svg");
+}
+
+@font-face {
+    font-family: "Trend Sans W00 Four";
+    src: url("https://db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.eot");
+    src: url("https://db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.svg#Trend Sans W00 Four")format("svg");
+}
+
+@font-face {
+    font-family: "Trend Sans W00 Five";
+    src: url("https://db.onlinewebfonts.com/t/a96b150094beee7934d27cc7fff32395.eot");
+    src: url("https://db.onlinewebfonts.com/t/a96b150094beee7934d27cc7fff32395.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/a96b150094beee7934d27cc7fff32395.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/a96b150094beee7934d27cc7fff32395.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/a96b150094beee7934d27cc7fff32395.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/a96b150094beee7934d27cc7fff32395.svg#Trend Sans W00 Five")format("svg");
+}
+
+
+/* Animação{ */
+    .txt-animado span::before{
+        content: "";
+        color: white;
+        animation: palavras 15s infinite;
+    }
+
+    .txt-animado span::after{
+        content: "";
+        position: absolute;
+        height: 105%;
+        border-left: 5px solid white;
+        right: -5px;
+        animation: cursor 1s infinite, digitando 15s steps(11) infinite;
+        width: calc(100% + 5px);
+        background-color: #22272D;
+    }
+
+    @keyframes digitando{
+        10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+            width: 0;
+        }
+
+        5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+            width: calc(100% + 5px);
+        }
+    }
+
+    @keyframes cursor{
+        0%{
+            border-left: 5px solid black;
+        }
+    }
+
+    @keyframes palavras {
+        0%, 20%{
+            content: "    SQL    ";
+        }
+        21%, 40%{
+            content: "  LARAVEL  ";
+        }
+        41%, 60%{
+            content: " JAVASCRIPT";
+        }
+        61%, 80%{
+            content: " FULL STACK";
+        }
+        81%, 100%{
+            content: "    WEB    "
+        }
+    }
+/* } */
+
+.link-block{
+    border: 1px solid white;
+    border-radius: 15px;
+    min-width: 20%;
+    padding: 10px;
+    transition: transform .3s, box-shadow .3s, text-decoration .3s;
+}
+.link-block:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 10px 0px white;
+    text-decoration: underline;
 }
